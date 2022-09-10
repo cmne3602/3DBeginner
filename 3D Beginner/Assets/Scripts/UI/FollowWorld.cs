@@ -7,14 +7,18 @@ public class FollowWorld : MonoBehaviour {
     public Vector3 offset;
     private Camera cam;
 
-    void Start() {
+    private void Start() {
         cam = Camera.main;
     }
 
-    void Update() {
+    private void Update() {
         Vector3 position = cam.WorldToScreenPoint(lookAt.position + offset);
 
         if(transform.position != position)
             transform.position = position;
+    }
+
+    public void ChangeLookAt(Transform next) {
+        lookAt = next;
     }
 }

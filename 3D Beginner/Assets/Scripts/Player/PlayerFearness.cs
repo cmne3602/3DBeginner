@@ -22,6 +22,8 @@ public class PlayerFearness : MonoBehaviour {
 
     private float SetFearnessSpeed() {
         float fearnessSpeed = 0.5f + fearnessCollider.GetDistanceFromNeariestEnemy() * 0.1f;
+        if (GameManager.isFriendwithGhost)
+            fearnessSpeed = (fearnessSpeed < 0.9f) ? 0.9f : fearnessSpeed;
         return fearnessSpeed;
     }
 }

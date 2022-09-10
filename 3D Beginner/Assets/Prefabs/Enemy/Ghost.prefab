@@ -453,6 +453,7 @@ GameObject:
   - component: {fileID: 8393585654461883638}
   - component: {fileID: 212622434332870431}
   - component: {fileID: 7969630831398177557}
+  - component: {fileID: 1210024313013497287}
   - component: {fileID: 33060449577575154}
   - component: {fileID: 4858014415771038389}
   m_Layer: 0
@@ -583,6 +584,20 @@ MonoBehaviour:
   player: {fileID: 0}
   ghostStates: {fileID: 33060449577575154}
   isCoolTime: 0
+--- !u!114 &1210024313013497287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8353976915208963988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1886f1b19d33f348b5280b877c9c7a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navMeshAgent: {fileID: 8393585654461883638}
+  player: {fileID: 0}
 --- !u!114 &33060449577575154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,6 +612,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wayPointPatrol: {fileID: 212622434332870431}
   chasePlayer: {fileID: 7969630831398177557}
+  watchPlayer: {fileID: 1210024313013497287}
+  pointOfView: {fileID: 2656896679102351400}
+  curStates: 0
 --- !u!82 &4858014415771038389
 AudioSource:
   m_ObjectHideFlags: 0
